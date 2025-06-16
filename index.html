@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raízes do Sabor - Cardápio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="script.js">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+        <!-- Navbar Fixa com Ícones -->
+        <nav class="navbar-fixed">
+          <div class="navbar-container">
+            <h1 class="navbar-logo">
+              <i class="fas fa-utensils"></i> Raízes do Sabor</h1>
+            <div class="hamburger-menu">
+              <i class="bi bi-list"></i>
+            </div>
+            <div class="navbar-links">
+              <a href="#"><i class="bi bi-house-door"></i> Início</a>
+              <a href="#sobre"><i class="bi bi-info-circle"></i> Sobre</a>
+              <a href="#cardapio"><i class="bi bi-menu-button"></i> Cardápio</a>
+              <a href="#contato"><i class="bi bi-telephone"></i> Contato</a>
+            </div>
+          </div>
+        </nav>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>DESCUBRA <span>NOSSO CARDÁPIO</span> BRASILEIRO</h1>
+    </div>
+  </section>
+
+  <!-- Botão WhatsApp flutuante -->
+<a href="https://wa.me/5561999999999" class="whatsapp-float" aria-label="Contate-nos pelo WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Seção Sobre Nós -->
+<section class="sobre" id="sobre">
+  <div class="container">
+    <div class="section-title">
+      <h2>Nossa História</h2>
+      <p>Uma jornada de sabores e tradições brasileiras</p>
+    </div>
+    
+    <div class="sobre-content">
+      <div class="sobre-text" data-anime="fade-up">
+        <div class="sobre-timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2010</div>
+            <div class="timeline-content">
+              <h3>O Começo</h3>
+              <p>Tudo começou em uma pequena cozinha de fundo de quintal, onde nossa família reunia-se para preparar receitas tradicionais que passavam de geração em geração. O amor pela culinária brasileira nos inspirou a compartilhar esses sabores com o mundo.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-year">2012</div>
+            <div class="timeline-content">
+              <h3>Primeiro Espaço</h3>
+              <p>Com o sucesso das receitas entre amigos e vizinhos, abrimos nosso primeiro espaço físico - uma modesta casa com apenas 5 mesas. O "Raízes do Sabor" começava a ganhar forma, sempre mantendo a essência caseira e acolhedora.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-year">2018</div>
+            <div class="timeline-content">
+              <h3>Reconhecimento</h3>
+              <p>Nosso compromisso com ingredientes locais e técnicas tradicionais nos rendeu o prêmio "Sabores Autênticos" pelo Guia Gastronômico de Brasília. Foi quando percebemos que estávamos no caminho certo.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-year">Hoje</div>
+            <div class="timeline-content">
+              <h3>Nossa Missão</h3>
+              <p>Continuamos honrando nossas raízes, mas sempre inovando. Trabalhamos diretamente com pequenos produtores regionais para oferecer o melhor da culinária brasileira, mantendo viva a tradição de receitas que contam histórias.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="sobre-valores">
+          <div class="valor-item">
+            <i class="bi bi-heart-fill"></i>
+            <h4>Paixão</h4>
+            <p>Pela culinária brasileira e suas tradições</p>
+          </div>
+          <div class="valor-item">
+            <i class="bi bi-tree-fill"></i>
+            <h4>Sustentabilidade</h4>
+            <p>Ingredientes locais e sazonais</p>
+          </div>
+          <div class="valor-item">
+            <i class="bi bi-people-fill"></i>
+            <h4>Comunidade</h4>
+            <p>Apoio aos produtores regionais</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="sobre-img" data-anime="fade-up">
+        <div class="img-container">
+          <img src="img/restaurante.png" alt="Interior aconchegante do restaurante Raízes do Sabor" loading="lazy">
+          <div class="img-overlay">
+            <p>Desde 2010 servindo sabores com história</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Cardápio Section -->
+  <section class="cardapio" id="cardapio">
+    <div class="container">
+      <div class="section-title">
+        <h2>Nosso Cardápio</h2>
+        <p>Delicie-se com nossos pratos tradicionais brasileiros</p>
+      </div>
+
+      <!-- Filtros para o cardápio -->
+<div class="container filtros-container">
+  <div class="filtros">
+    <button class="filtro-btn active" data-categoria="todos">Todos</button>
+    <button class="filtro-btn" data-categoria="entradas">Entradas</button>
+    <button class="filtro-btn" data-categoria="petiscos">Petiscos</button>
+    <button class="filtro-btn" data-categoria="principais">Principais</button>
+    <button class="filtro-btn" data-categoria="saladas">Saladas</button>
+    <button class="filtro-btn" data-categoria="sobremesas">Sobremesas</button>
+    <button class="filtro-btn" data-categoria="bebidas">Bebidas</button>
+  </div>
+</div>
+
+      <!-- ========== ENTRADAS ========== -->
+      <h3 class="categoria">Entradas</h3>
+      <div class="menu-grid">
+        <div class="menu-item"><img src="img/Bolinho de Mandioca.png" alt=""><h4>Bolinho de Mandioca</h4><p>Recheado com carne seca e ervas.</p><span class="preco">R$ 18,90</span></div>
+        <div class="menu-item"><img src="img/Caldo de Feijão.png" alt=""><h4>Caldo de Feijão</h4><p>Com bacon e temperos caseiros.</p><span class="preco">R$ 14,90</span></div>
+        <div class="menu-item"><img src="img/Mini Pastéis.png" alt=""><h4>Mini Pastéis</h4><p>Sortidos: queijo, carne e frango.</p><span class="preco">R$ 17,90</span></div>
+        <div class="menu-item"><img src="img/Dadinhos de Tapioca.png" alt=""><h4>Dadinhos de Tapioca</h4><p>Com geleia de pimenta artesanal.</p><span class="preco">R$ 19,90</span></div>
+        <div class="menu-item"><img src="img/Escondidinho Mini.png" alt=""><h4>Escondidinho Mini</h4><p>Com carne seca e purê de mandioca.</p><span class="preco">R$ 19,90</span></div>
+        <div class="menu-item"><img src="img/Pão de Queijo Recheado.png" alt=""><h4>Pão de Queijo Recheado</h4><p>Com requeijão cremoso.</p><span class="preco">R$ 16,90</span></div>
+        <div class="menu-item"><img src="img/Torradinhas com Patê.png" alt=""><h4>Torradinhas com Patê</h4><p>Com alho, ervas e queijo.</p><span class="preco">R$ 12,90</span></div>
+        <div class="menu-item"><img src="img/Caldinho de Mandioca.png" alt=""><h4>Caldinho de Mandioca</h4><p>Com carne desfiada acompanhado de torradinhas.</p><span class="preco">R$ 15,90</span></div>
+      </div>
+
+      <!-- ========== PETISCOS ========== -->
+      <h3 class="categoria">Petiscos</h3>
+      <div class="menu-grid">
+        <div class="menu-item"><img src="img/Torresmo Crocante.png" alt=""><h4>Torresmo Crocante</h4><p>Tradicional mineiro, bem sequinho.</p><span class="preco">R$ 21,90</span></div>
+        <div class="menu-item"><img src="img/Linguiça Artesanal.png" alt=""><h4>Linguiça Artesanal</h4><p>Com cebola caramelizada.</p><span class="preco">R$ 24,90</span></div>
+        <div class="menu-item"><img src="img/Mandioca Frita.png" alt=""><h4>Mandioca Frita</h4><p>Com manteiga de garrafa.</p><span class="preco">R$ 16,90</span></div>
+        <div class="menu-item"><img src="img/Isca de Peixe.png" alt=""><h4>Isca de Peixe</h4><p>Com molho tártaro caseiro.</p><span class="preco">R$ 25,90</span></div>
+        <div class="menu-item"><img src="img/Frango a Passarinho.png" alt=""><h4>Frango a Passarinho</h4><p>Com alho dourado.</p><span class="preco">R$ 22,90</span></div>
+        <div class="menu-item"><img src="img/Queijo Coalho.png" alt=""><h4>Queijo Coalho</h4><p>Grelhado com melaço.</p><span class="preco">R$ 18,90</span></div>
+        <div class="menu-item"><img src="img/Camarão Empanado.png" alt=""><h4>Camarão Empanado</h4><p>Com molho especial.</p><span class="preco">R$ 32,90</span></div>
+        <div class="menu-item"><img src="img/Batata Frita.png" alt=""><h4>Batata Frita</h4><p>Com queijo cheddar ou mussarela acompanhado de bacon em cubo.</p><span class="preco">R$ 17,90</span></div>
+      </div>
+
+      <!-- ========== PRATOS PRINCIPAIS ========== -->
+      <h3 class="categoria">Pratos Principais</h3>
+      <div class="menu-grid">
+        <div class="menu-item"><img src="img/Feijoada Completa.png" alt=""><h4>Feijoada Completa</h4><p>Servida com arroz, couve e farofa.</p><span class="preco">R$ 36,90</span></div>
+        <div class="menu-item"><img src="img/Moqueca Baiana.png" alt=""><h4>Moqueca Baiana</h4><p>Peixe com dendê e leite de coco.</p><span class="preco">R$ 39,90</span></div>
+        <div class="menu-item"><img src="img/Baião de Dois.png" alt=""><h4>Baião de Dois</h4><p>Arroz, feijão verde e carne seca.</p><span class="preco">R$ 28,90</span></div>
+        <div class="menu-item"><img src="img/Arroz Carreteiro.png" alt=""><h4>Arroz Carreteiro</h4><p>Com carne de sol desfiada.</p><span class="preco">R$ 29,90</span></div>
+        <div class="menu-item"><img src="img/Galinhada Caipira.png" alt=""><h4>Galinhada Caipira</h4><p>Tradicional do interior.</p><span class="preco">R$ 27,90</span></div>
+        <div class="menu-item"><img src="img/Tilápia Grelhada.png" alt=""><h4>Tilápia Grelhada</h4><p>Com purê e legumes salteados.</p><span class="preco">R$ 34,90</span></div>
+        <div class="menu-item"><img src="img/Costelinha com Barbecue.png" alt=""><h4>Costelinha com Barbecue</h4><p>Com batatas rústicas.</p><span class="preco">R$ 38,90</span></div>
+        <div class="menu-item"><img src="img/Escondidinho Nordestino.png" alt=""><h4>Escondidinho Nordestino</h4><p>Com carne seca e queijo coalho.</p><span class="preco">R$ 31,90</span></div>
+      </div>
+
+      <!-- ========== SALADAS ========== -->
+      <h3 class="categoria">Saladas</h3>
+      <div class="menu-grid">
+        <div class="menu-item"><img src="img/Salada Tropical.png" alt=""><h4>Salada Tropical</h4><p>Folhas, frutas e molho de iogurte.</p><span class="preco">R$ 18,90</span></div>
+        <div class="menu-item"><img src="img/Salada Caesar.png" alt=""><h4>Salada Caesar</h4><p>Com frango grelhado e parmesão.</p><span class="preco">R$ 20,90</span></div>
+        <div class="menu-item"><img src="img/Salada de Quinoa.png" alt=""><h4>Salada de Quinoa</h4><p>Com legumes frescos.</p><span class="preco">R$ 19,90</span></div>
+        <div class="menu-item"><img src="img/Salada Caprese.png" alt=""><h4>Salada Caprese</h4><p>Mussarela de búfala e manjericão.</p><span class="preco">R$ 21,90</span></div>
+        <div class="menu-item"><img src="img/Salada Raízes.png" alt=""><h4>Salada Raízes</h4><p>Beterraba, cenoura e molho mostarda.</p><span class="preco">R$ 17,90</span></div>
+        <div class="menu-item"><img src="img/Salada de Grãos.png" alt=""><h4>Salada de Grãos</h4><p>Com lentilha, feijão fradinho e mix de folhas.</p><span class="preco">R$ 19,90</span></div>
+        <div class="menu-item"><img src="img/Salada com Abacate.png" alt=""><h4>Salada com Abacate</h4><p>Rúcula, abacate e castanhas.</p><span class="preco">R$ 22,90</span></div>
+        <div class="menu-item"><img src="img/Salada de Frango.png" alt=""><h4>Salada de Frango</h4><p>Grelhado com legumes da estação.</p><span class="preco">R$ 20,90</span></div>
+      </div>
+
+      <!-- ========== SOBREMESAS ========== -->
+      <h3 class="categoria">Sobremesas</h3>
+      <div class="menu-grid">
+        <div class="menu-item"><img src="img/Pudim de Leite.png" alt=""><h4>Pudim de Leite</h4><p>Tradicional e cremoso.</p><span class="preco">R$ 10,90</span></div>
+        <div class="menu-item"><img src="img/Cocada Cremosa.png" alt=""><h4>Cocada Cremosa</h4><p>Com leite condensado e coco fresco.</p><span class="preco">R$ 11,90</span></div>
+        <div class="menu-item"><img src="img/Mousse de Maracujá.png" alt=""><h4>Mousse de Maracujá</h4><p>Com calda natural.</p><span class="preco">R$ 9,90</span></div>
+        <div class="menu-item"><img src="img/Romeu e Julieta.png" alt=""><h4>Romeu e Julieta</h4><p>Goiabada e queijo minas.</p><span class="preco">R$ 10,90</span></div>
+        <div class="menu-item"><img src="img/Pavê de Chocolate.png" alt=""><h4>Pavê de Chocolate</h4><p>Com biscoitos e creme especial.</p><span class="preco">R$ 12,90</span></div>
+        <div class="menu-item"><img src="img/Quindim.png" alt=""><h4>Quindim</h4><p>Delicado e dourado.</p><span class="preco">R$ 9,90</span></div>
+        <div class="menu-item"><img src="img/Canjica Cremosa.png" alt=""><h4>Canjica Cremosa</h4><p>Com amendoim e coco.</p><span class="preco">R$ 11,90</span></div>
+        <div class="menu-item"><img src="img/Torta de Limão.png" alt=""><h4>Torta de Limão</h4><p>Base crocante e mousse suave.</p><span class="preco">R$ 10,90</span></div>
+      </div>
+
+      <!-- ========== BEBIDAS ========== -->
+      <h3 class="categoria">Bebidas</h3>
+      <div class="menu-grid">
+        <div class="menu-item"><img src="img/Suco Natural.png" alt=""><h4>Suco Natural</h4><p>Laranja, abacaxi, maracujá, acerola.</p><span class="preco">R$ 6,90</span></div>
+        <div class="menu-item"><img src="img/Água com Gás.png" alt=""><h4>Água com Gás</h4><p>Garrafa 500ml.</p><span class="preco">R$ 4,00</span></div>
+        <div class="menu-item"><img src="img/Refrigerante.png" alt=""><h4>Refrigerante</h4><p>Latinha 350ml.</p><span class="preco">R$ 5,50</span></div>
+        <div class="menu-item"><img src="img/Caipirinha.png" alt=""><h4>Caipirinha</h4><p>Limão, açúcar e cachaça.</p><span class="preco">R$ 12,00</span></div>
+        <div class="menu-item"><img src="img/Vinho da Casa.png" alt=""><h4>Vinho da Casa</h4><p>Tinto suave ou seco.</p><span class="preco">R$ 15,00</span></div>
+        <div class="menu-item"><img src="img/Cerveja Long Neck.png" alt=""><h4>Cerveja Long Neck</h4><p>Diversas marcas.</p><span class="preco">R$ 7,90</span></div>
+        <div class="menu-item"><img src="img/Água de Coco.png" alt=""><h4>Água de Coco</h4><p>Natural gelada.</p><span class="preco">R$ 6,50</span></div>
+        <div class="menu-item"><img src="img/Batida Tropical.png" alt=""><h4>Batida Tropical</h4><p>Coco, maracujá ou morango.</p><span class="preco">R$ 13,00</span></div>
+      </div>
+    </div>
+  </section>
+
+      
+<!-- Seção Contato -->
+<section class="contato" id="contato">
+  <div class="container">
+    <div class="section-title">
+      <h2>Entre em Contato</h2>
+      <p>Estamos ansiosos para atendê-lo e responder suas dúvidas</p>
+    </div>
+    
+    <div class="contato-info">
+      <!-- Informações de Contato -->
+      <div class="contato-card">
+        <h3><i class="fas fa-map-marker-alt"></i> Endereço</h3>
+        <p>Rua das Tradições, 123 - Centro</p>
+        <p>Brasília - DF, 70000-000</p>
+        <p>Próximo à Praça Central</p>
+        <p>Estacionamento gratuito no local</p>
+      </div>
+      
+      <div class="contato-card">
+        <h3><i class="fas fa-phone-alt"></i> Contatos</h3>
+        <p><i class="fas fa-phone"></i> (61) 3333-4444</p>
+        <p><i class="fab fa-whatsapp"></i> (61) 99999-9999</p>
+        <p><i class="fas fa-envelope"></i> contato@raizesdosabor.com.br</p>
+        <p><i class="fas fa-calendar-check"></i> <a href="#" class="reserva-link">Faça sua reserva online</a></p>
+      </div>
+      
+      <div class="contato-card">
+        <h3><i class="fas fa-clock"></i> Horário de Funcionamento</h3>
+        <p><strong>Segunda a Sexta:</strong> 11h às 22h</p>
+        <p><strong>Sábado e Domingo:</strong> 11h às 23h</p>
+        <p><strong>Happy Hour:</strong> Terça a Sexta, 17h às 20h</p>
+        <p><strong>Rodízio de Pizza:</strong> Sáb e Dom, 19h às 22h</p>
+      </div>
+    </div>
+
+    <!-- Mapa -->
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30710.010971460957!2d-47.91651603717615!3d-15.817058596644811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3ac9f5dc25bd%3A0xb3f9fcf19595135c!2sAsa%20Sul%2C%20Bras%C3%ADlia%20-%20DF!5e0!3m2!1spt-BR!2sbr!4v1746818636470!5m2!1spt-BR!2sbr" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Testemunhos -->
+    <div class="testemunhos">
+      <h3>O que dizem nossos clientes:</h3>
+      <div class="testemunhos-wrapper">
+        <div class="testemunhos-line">
+          <!-- Testemunhos -->
+          <div class="testemunho">
+            <p>"A comida é maravilhosa e o atendimento impecável!" - João S.</p>
+            <div class="stars">
+              <span>⭐⭐⭐⭐⭐</span>
+            </div>
+          </div>
+          <div class="testemunho">
+            <p>"Ambiente aconchegante e os pratos são de dar água na boca!" - Maria A.</p>
+            <div class="stars">
+              <span>⭐⭐⭐⭐</span>
+            </div>
+          </div>
+          <div class="testemunho">
+            <p>"A experiência no Raízes do Sabor é única. Super recomendo!" - Pedro M.</p>
+            <div class="stars">
+              <span>⭐⭐⭐⭐⭐</span>
+            </div>
+          </div>
+          <div class="testemunho">
+            <p>"Adorei a comida e a equipe! Volto com certeza!" - Laura P.</p>
+            <div class="stars">
+              <span>⭐⭐⭐⭐</span>
+            </div>
+          </div>
+          <div class="testemunho">
+            <p>"O melhor restaurante que já fui! Comida incrível!" - Carlos E.</p>
+            <div class="stars">
+              <span>⭐⭐⭐⭐⭐</span>
+            </div>
+          </div>
+          <div class="testemunho">
+            <p>"Atendimento de primeira e pratos sensacionais!" - Ana F.</p>
+            <div class="stars">
+              <span>⭐⭐⭐⭐⭐</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer Atualizado -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="copyright">&copy; 2025 Raízes do Sabor. Todos os direitos reservados.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+      <!-- Botão Voltar ao Topo -->
+      <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+          <i class="fas fa-arrow-up"></i>
+      </button>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Seu JavaScript original -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  // Navbar scroll effect
+  const navbar = document.querySelector('.navbar-fixed');
+  
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // Back to top button
+  const backToTopButton = document.getElementById('backToTop');
+  
+  backToTopButton.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+      backToTopButton.style.display = 'block';
+    } else {
+      backToTopButton.style.display = 'none';
+    }
+  });
+
+  // Scroll animations
+  function animeScroll() {
+    const elements = document.querySelectorAll('[data-anime]');
+    const windowTop = window.scrollY + (window.innerHeight * 0.75);
+    
+    elements.forEach(element => {
+      if (windowTop > element.offsetTop) {
+        element.classList.add('animate');
+      }
+    });
+  }
+
+  // Run once on load
+  animeScroll();
+  
+  // Then run on scroll
+  window.addEventListener('scroll', animeScroll);
+
+  // Menu filters
+  document.querySelectorAll('.filtro-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Remove active class from all buttons
+      document.querySelectorAll('.filtro-btn').forEach(b => {
+        b.classList.remove('active');
+      });
+      
+      // Add active class to clicked button
+      this.classList.add('active');
+      
+      const categoria = this.dataset.categoria;
+      const menuSections = document.querySelectorAll('.cardapio .menu-grid');
+      
+      menuSections.forEach(section => {
+        const sectionTitle = section.previousElementSibling.textContent.toLowerCase();
+        
+        if (categoria === 'todos') {
+          section.style.display = 'grid';
+          section.previousElementSibling.style.display = 'block';
+        } else if (sectionTitle.includes(categoria)) {
+          section.style.display = 'grid';
+          section.previousElementSibling.style.display = 'block';
+        } else {
+          section.style.display = 'none';
+          section.previousElementSibling.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Mobile menu
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  const navLinks = document.querySelector('.navbar-links');
+  
+  if (hamburgerMenu) {
+    hamburgerMenu.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  }
+
+  // Close mobile menu when clicking a link
+  document.querySelectorAll('.navbar-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      hamburgerMenu.classList.remove('active');
+    });
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Tab') {
+      document.documentElement.style.scrollBehavior = 'smooth';
+    }
+  });
+
+  // Schema markup
+  function addSchemaMarkup() {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Raízes do Sabor",
+      "image": "img/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua das Tradições, 123",
+        "addressLocality": "Brasília",
+        "addressRegion": "DF",
+        "postalCode": "70000-000"
+      },
+      "telephone": "+556133334444",
+      "openingHours": "Mo-Fr 11:00-22:00, Sa-Su 11:00-23:00",
+      "servesCuisine": "Brazilian",
+      "priceRange": "$$",
+      "hasMenu": window.location.href + "#cardapio"
+    });
+    document.head.appendChild(script);
+  }
+
+  addSchemaMarkup();
+});
+// Adicione isso ao seu script existente
+window.addEventListener('scroll', function() {
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.navbar-links a');
+  
+  let current = '';
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    
+    if (pageYOffset >= (sectionTop - 100)) {
+      current = section.getAttribute('id');
+    }
+  });
+  
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href').includes(current)) {
+      link.classList.add('active');
+    }
+  });
+});
+</script>
+</body>
+</html>
