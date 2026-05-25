@@ -5,6 +5,9 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
+Acesse o protótipo online: https://luwnzr.github.io/vFinal_raizes_do_sabor/
+
+
 ## 📖 Sobre o Projeto
 
 O **Raízes do Sabor** é um website responsivo desenvolvido para um restaurante fictício. O projeto combina um design elegante com funcionalidades de filtragem de cardápio.
